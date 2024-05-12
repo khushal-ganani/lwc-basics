@@ -1,0 +1,30 @@
+<!--
+  @description       : 
+  @author            : khushal.ganani@gmail.com
+  @group             : 
+  @last modified on  : 11-27-2023
+  @last modified by  : khushal.ganani@gmail.com
+-->
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          Publisher
+      </div>
+      <div class="slds-m-around_medium">
+        <lightning-combobox
+            name="progress"
+            label="Color Choice"
+            value={color}
+            placeholder="Select Color"
+            options={colorOptions}
+            onchange={handleColorChange}  
+        ></lightning-combobox><br />
+        <lightning-button 
+          variant="brand"
+          label="Publish" 
+          onclick={handleClick} 
+        ></lightning-button>
+      </div>
+    </lightning-card>
+    
+</template>

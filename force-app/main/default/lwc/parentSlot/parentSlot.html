@@ -1,0 +1,42 @@
+<!--
+  @description       : 
+  @author            : khushal.ganani@gmail.com
+  @group             : 
+  @last modified on  : 10-31-2023
+  @last modified by  : khushal.ganani@gmail.com
+-->
+<template>
+    <lightning-card icon-name="standard:contact" variant="base">
+      <div slot="title">
+          Slot Example
+      </div>
+
+   
+        <p>The layout items are spaced horizontally across the container, starting and ending with a space, using attribute <code>horizontal-align="space"</code>.</p>
+    <div class="slda-p-around_medium">
+        <lightning-layout horizontal-align="space">
+            <lightning-layout-item padding="around-small">
+                <c-child-slot>
+                    <h1 slot="name">Khushal Ganani</h1>
+                    <p slot="contactInfo">khushal.ganani@gmail.com</p>
+                    <p slot="company">Premium Learnings System</p>
+                </c-child-slot>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <c-child-slot>
+                    <h1 slot="name">Nikhil Ganani</h1>
+                    <p slot="contactInfo">nihil.ganani@gmail.com</p>
+                    <p slot="company">In Trend Mens Wear</p>
+                </c-child-slot>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <c-child-slot>
+                    <h1 slot="name">Amar Ganani</h1>
+                    <p slot="contactInfo">amar.ganani@gmail.com</p>
+                    <p slot="company">In Trend Mens Wear</p>
+                </c-child-slot>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+    </lightning-card>
+</template>

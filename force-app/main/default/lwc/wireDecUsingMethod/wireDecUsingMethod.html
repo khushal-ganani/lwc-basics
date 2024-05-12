@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : khushal.ganani@gmail.com
+  @group             : 
+  @last modified on  : 10-27-2023
+  @last modified by  : khushal.ganani@gmail.com
+-->
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          Wire Decorator using method in JS file
+      </div>
+      <template if:true={check}>
+        <template for:each={accounts} for:item="ac">
+          <p key={ac.Id}>{ac.Name}</p>
+        </template>
+      </template>
+      <template if:false={check}>
+        <p>Sorry, we cannot fetch any account data</p>
+      </template>
+    </lightning-card>
+    
+</template>

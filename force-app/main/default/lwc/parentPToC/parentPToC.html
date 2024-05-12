@@ -1,0 +1,31 @@
+<!--
+  @description       : 
+  @author            : khushal.ganani@gmail.com
+  @group             : 
+  @last modified on  : 11-23-2023
+  @last modified by  : khushal.ganani@gmail.com
+-->
+<template>
+    <lightning-card icon-name="utility:user" variant="base">
+      <div slot="title">
+          I am a parent component with @api property
+      </div>
+      <div class="slds-var-m-around_medium">
+        <lightning-input 
+          value={percentage}
+          type="number"
+          label="Enter some Percentage"
+          onchange={handleChange}
+        ></lightning-input><br/>
+        <template lwc:if={validValue}>
+          <c-child-p-to-c percentage={percentage}></c-child-p-to-c>
+        </template>
+        <template lwc:elseif={isNegative}>
+          <p>The input value should be positive</p>
+        </template>
+        <template lwc:else>
+          <p>The input value should be less than 100</p>
+        </template>
+      </div>
+    </lightning-card>
+</template>

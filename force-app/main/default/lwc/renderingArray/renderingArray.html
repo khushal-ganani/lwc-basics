@@ -1,0 +1,35 @@
+<!--
+  @description       : Print a employees array on the Component UI 
+  @author            : khushal.ganani@gmail.com
+  @group             : 
+  @last modified on  : 10-25-2023
+  @last modified by  : khushal.ganani@gmail.com
+-->
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          Rendering JS Array Object in the HTML Component
+      </div>
+      <lightning-input 
+        type="checkbox"
+        label="Employee Details"
+        onclick={handleClick}
+      ></lightning-input>
+     <table>
+        <tr>
+            <th>Sr. No.</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Title</th>
+        </tr>
+        <template if:true={isDetailsVisible} for:each={employees} for:item="emp">
+            <tr key={emp.id}> 
+                <td>{emp.id}</td>
+                <td>{emp.name}</td>
+                <td>{emp.age}</td>
+                <td>{emp.title}</td>
+            </tr>
+        </template>
+     </table>
+</lightning-card>
+</template>

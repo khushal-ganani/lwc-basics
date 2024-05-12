@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : khushal.ganani@gmail.com
+  @group             : 
+  @last modified on  : 10-30-2023
+  @last modified by  : khushal.ganani@gmail.com
+-->
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          Fetchig Account Names using uiRecordApi (without controllers) 
+      </div>
+      
+      <div>
+        <lightning-datatable
+          key-field="id"
+          data={Accounts}
+          columns={columns}
+        ></lightning-datatable>
+      </div>
+    </lightning-card>
+    
+</template>

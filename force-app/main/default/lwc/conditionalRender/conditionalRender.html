@@ -1,0 +1,32 @@
+<!--
+  @description       : Conditional rendering of the div with p tag using 
+  @author            : khushal.ganani@gmail.com
+  @group             : 
+  @last modified on  : 10-27-2023
+  @last modified by  : khushal.ganani@gmail.com
+-->
+<template>
+    <lightning-card title="Check Details">
+       <div class="slds-m-around_medium">
+        <lightning-input 
+        name="check"
+          type="checkbox"
+          label="Check details"
+          onclick={handleClick}
+        ></lightning-input>
+       
+       <lightning-input 
+          type="checkbox"
+          label="Hide details"
+          onclick={handleClick}
+          name="hide"
+        ></lightning-input>
+       </div>
+<!--! conditional rendering - if the {isDetailsVisible} property returns true, the following template will render-->
+       <template if:true={isDetailsVisible}> 
+        <div class="slds-m-around_medium">
+            <p>Here are the details!</p>
+        </div>
+       </template>
+    </lightning-card>
+</template>

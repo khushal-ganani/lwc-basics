@@ -1,0 +1,14 @@
+<!--
+  @description       : 
+  @author            : khushal.ganani@gmail.com
+  @group             : 
+  @last modified on  : 10-27-2023
+  @last modified by  : khushal.ganani@gmail.com
+-->
+<template>
+    <lightning-card title="Wire Decorator">
+        <template for:each={acctns.data} for:item="ac">
+            <p key={ac.Id}>{ac.Name}</p>
+        </template>
+    </lightning-card>
+</template>

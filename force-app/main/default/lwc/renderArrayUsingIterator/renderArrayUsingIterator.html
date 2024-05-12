@@ -1,0 +1,42 @@
+<!--
+  @description       : 
+  @author            : khushal.ganani@gmail.com
+  @group             : 
+  @last modified on  : 10-25-2023
+  @last modified by  : khushal.ganani@gmail.com
+-->
+
+<template>
+    
+    <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          Rendering JS Array Object in the HTML Component
+      </div>
+      <lightning-input 
+        type="checkbox"
+        label="Employee Details"
+        onclick={handleClick}
+      ></lightning-input>
+     <table>
+        <tr>
+            <th>Sr. No.</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Title</th>
+        </tr>
+<!--? Iterator - To apply a special behavior to the first or last item in a list, use the iterator directive,       -->
+<!--? iterator:iteratorName={array}. Use the iterator directive on a template tag.      -->
+        <template if:true={isDetailsVisible} iterator:it={employees}>
+            <tr key={it.value.id}> 
+                <td lwc:if={it.first} class="list-first"></td>
+                <td>{it.value.id}</td>
+                <td>{it.value.name}</td>
+                <td>{it.value.age}</td>
+                <td>{it.value.title}</td>
+                <td lwc:if={it.last} class="list-last"></td>
+            </tr>
+        </template>
+     </table>
+</lightning-card>
+
+</template>

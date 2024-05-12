@@ -1,0 +1,27 @@
+<!--
+  @description       : 
+  @author            : khushal.ganani@gmail.com
+  @group             : 
+  @last modified on  : 11-26-2023
+  @last modified by  : khushal.ganani@gmail.com
+-->
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          connectedCallbackExample
+      </div>
+      <div class="slds-m-around_medium">
+        <h1>Accessing the Component's Parent Container:</h1><br />
+        <p>In the connectedCallback(), you can access the component's parent container using this.parentElement. This
+            allows you to interact with the container and retrieve information or manipulate elements within it. For 
+            instance, you might want to adjust the styling of the container based on the presence of your component.</p>
+            <br /><br />
+        
+            <h1>Communicating with the Document:</h1><br />
+            <p>The connectedCallback() can also be used to establish communication with the overall document. In the example, an
+                 event listener is added to the document for the 'click' event. When the document is clicked, the handleDocumentClick 
+                 method is invoked. This is a simple example, but you can use this pattern to coordinate behavior with the broader 
+                 environment, responding to events or conditions in the document.</p>    
+      </div>
+    </lightning-card>
+</template>

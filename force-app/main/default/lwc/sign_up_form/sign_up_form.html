@@ -1,0 +1,24 @@
+<!--
+  @description       : 
+  @author            : khushal.ganani@gmail.com
+  @group             : 
+  @last modified on  : 10-24-2023
+  @last modified by  : khushal.ganani@gmail.com
+-->
+<template>
+    <lightning-card label="Sign-Up Page">
+      <lightning-input type="text" label="First Name" placeholder="Enter your first name"></lightning-input>
+      <lightning-input type="text" label="Last Name" placeholder="Enter your last name"></lightning-input>
+      <lightning-input type="date" label="Date of Birth"></lightning-input>
+      <lightning-input type="text" label="Username" placeholder="Enter in the test@abc.com format"></lightning-input>
+      <lightning-input type="text" label="Password" placeholder="Enter your password here"></lightning-input>
+      <label for="Gen">Gender :-</label>
+      <div id="Gen">
+      <lightning-input type="radio" label="Male"></lightning-input>
+      <lightning-input type="radio" label="Female"></lightning-input>
+      <lightning-button label="Submit" onclick={handleClick}></lightning-button>
+      </div>
+
+    </lightning-card>
+    
+</template>
